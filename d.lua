@@ -12,7 +12,7 @@ ContentProvider:PreloadAsync({"rbxassetid://3570695787", "rbxassetid://270889159
 
 local Library = {
     Theme = {
-        MainColor = Color3.fromRGB(255, 255, 255),
+        MainColor = Color3.fromRGB(15, 15, 15),
         BackgroundColor = Color3.fromRGB(35, 35, 35),
         UIToggleKey = Enum.KeyCode.Insert,
         TextFont = Enum.Font.SourceSansBold,
@@ -121,7 +121,7 @@ local Tabs = Instance.new("Frame")
 local TabButtons = Instance.new("ImageLabel")
 local TabButtonLayout = Instance.new("UIListLayout")
 
-UILibrary.Name = HttpService:GenerateGUID(false)
+UILibrary.Name = "gamesense"
 UILibrary.Parent = CoreGui
 UILibrary.DisplayOrder = 1
 UILibrary.ZIndexBehavior = Enum.ZIndexBehavior.Global
@@ -1576,10 +1576,10 @@ function onKeyPress(actionName, userInputState, inputObject)
     if userInputState == Enum.UserInputState.Begin then
         if toggle == false then
              toggle = true
-              game:GetService("CoreGui").UILibrary.Enabled = true
+              game:GetService("CoreGui").gamesense.Enabled = true
         else
             toggle = false
-             game:GetService("CoreGui").UILibrary.Enabled = false
+             game:GetService("CoreGui").gamesense.Enabled = false
         end
     end
 end
